@@ -1,10 +1,10 @@
-import React from 'react';
+import React from "react";
 
 export default function TodoCard() {
-  return(
+  return (
     <div>
       {/* <input type="text" /> */}
       TodoCard
-    </div>,
+    </div>
   );
 }

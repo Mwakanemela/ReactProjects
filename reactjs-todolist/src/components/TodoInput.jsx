@@ -1,8 +1,10 @@
+import React from "react";
+
 export default function TodoInput() {
-  return(
+  return (
     <div>
       {/* <input type="text" /> */}
       TodoInput
-    </div>,
+    </div>
   );
 }
