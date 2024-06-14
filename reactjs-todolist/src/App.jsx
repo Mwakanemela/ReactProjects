@@ -1,14 +1,12 @@
 import TodoInput from "./components/TodoInput.jsx";
 import TodoList from "./components/TodoList.jsx";
-import {useState} from "react";
+import { useState } from "react";
 function App() {
   // let todos = [];
 
-  const [todos, setTodos] = useState([
-    "Write code",
-    "Do exercise",
-    "Listen to music",
-  ]);
+  const [todos, setTodos] = useState([]);
+
+  const [todoValue, setTodoValue] = useState("");
 
   function handleAddedTodos(newTodo) {
     const newTodoList = [...todos, newTodo];
@@ -20,15 +18,28 @@ function App() {
     setTodos(newTodoList);
   }
 
-  const editTodoList = (index, newTodo) => {
-    const newTodoList = [...todos];
-    newTodoList[index] = newTodo;
-    setTodos(newTodoList);
+  function handleEditTodoList(index) {
+    const todoTobeEdited = todos[index];
+    setTodoValue(todoTobeEdited);
+    handleDeleteTodo(index);
   }
+  // const editTodoList = (index) => {
+  //   const todoTobeEdited = todos[index];
+  //   setTodoValue(todoTobeEdited);
+  //   handleDeleteTodo(index);
+  // };
   return (
     <>
-      <TodoInput handleAddedTodos={handleAddedTodos}/>
-      <TodoList handleDeleteTodo={handleDeleteTodo} todos={todos} />
+      <TodoInput
+        todoValue={todoValue}
+        setTodoValue={setTodoValue}
+        handleAddedTodos={handleAddedTodos}
+      />
+      <TodoList
+        handleEditTodoList={handleEditTodoList}
+        handleDeleteTodo={handleDeleteTodo}
+        todos={todos}
+      />
     </>
   );
 }
