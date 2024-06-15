@@ -11,7 +11,7 @@ export default function TodoInput(props) {
         type="text"
         placeholder="What do you want to do?..."
       />
-      <button
+      <button className= "addTodoBtn"
         onClick={() => {
           handleAddedTodos(todoValue);
           setTodoValue("");

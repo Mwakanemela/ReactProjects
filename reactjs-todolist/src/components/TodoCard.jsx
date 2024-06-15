@@ -6,7 +6,7 @@ export default function TodoCard(props) {
     <li className="todoItem">
       {children}
       <div className="todoActionContainer">
-        <button
+        <button className="btn"
           onClick={() => {
             handleDeleteTodo(index);
           }}
@@ -14,7 +14,7 @@ export default function TodoCard(props) {
           <i className="fa-solid fa-trash-can"></i>
         </button>
 
-        <button
+        <button className="btn"
           onClick={() => {
             handleEditTodoList(index);
           }}
