@@ -21,7 +21,7 @@ export default function Headers() {
           <i class="fa-solid fa-bars"></i>
         </a>
         <a href="">
-          <img src="public/mwaka.jpg" alt="" />
+          <img src="/mwaka.jpg" alt="" />
         </a>
       </section>
     </header>
