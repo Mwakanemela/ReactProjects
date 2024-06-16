@@ -1,0 +1,149 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  background-color: #cccccc;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  /* font-size: 1.2em; */
+  font-size: 0.8em;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  align-items: center;
+}
+
+header section img {
+  max-width: 40px;
+  border-radius: 49%;
+  border: 2px solid #334155;
+}
+
+nav,
+section {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+a {
+  text-decoration: unset;
+  color: black;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  padding: 0 20px;
+}
+
+h1 {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 4em;
+}
+
+.searchInput {
+  display: flex;
+  width: 100%;
+  margin: 0 auto;
+  justify-content: center;
+  max-width: 700px;
+  gap: 4px;
+  border: 1px solid #aca7a7;
+  padding: 10px;
+  border-radius: 15px;
+}
+
+.searchInput:hover {
+  border: transparent;
+  background-color: #aca7a7;
+}
+
+.searchInput i:hover {
+  cursor: pointer;
+}
+input {
+  background: transparent;
+  border: none;
+  outline: unset;
+  flex: 1;
+}
+.searchIconContainer {
+  display: flex;
+  gap: 14px;
+}
+.searchButtonContainer {
+  display: flex;
+  /* align-items: center; */
+  gap: 8px;
+}
+/* .searchIconContainer:hover {
+} */
+
+.searchButtonContainer button {
+  border: 1px solid transparent;
+  padding: 12px;
+  color: white;
+  cursor: pointer;
+  background-color: #334155;
+}
+
+.searchButtonContainer button:hover {
+  border: 1px solid #aca7a7;
+}
+
+.languageSelection {
+  font-size: 1em;
+}
+.languageSelection span {
+  color: #334155;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+}
+
+footer > section {
+  padding: 20px;
+}
+
+footer > section:last-child {
+  border-top: 1px solid #aca7a7;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  /* flex-wrap: wrap; */
+}
+
+.footerLinks {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-size: 0.8em;
+}
+
+@media screen and (min-width: 800px) {
+  footer > section:last-child {
+    flex-direction: row;
+    font-size: 1.2em;
+  }
+}
